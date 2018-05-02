@@ -6,6 +6,10 @@
   @extend .font-serrat;
   font-weight:300;
 }
+.font-serrat-bold{
+  @extend .font-serrat;
+  font-weight:600;
+}
 
 .font-gills{
   font-family: 'Lato', sans-serif;

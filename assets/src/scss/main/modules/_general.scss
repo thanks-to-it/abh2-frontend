@@ -1,18 +1,49 @@
-.block-ch-lh{
+.block-ch-lh {
   @extend %block-ch-lh;
 }
 
-.block-ch-lh-o{
+.block-ch-lh-o {
   @extend %block-ch-lh-o;
 }
 
-body{
+body {
+  @extend .font-pts;
   background-image: url("../images/bkg.png");
-  color:#000;
+  color: #000;
 }
 
-img{
+img {
   max-width: 100%;
-  height:auto;
+  height: auto;
 }
 
+.section {
+  padding: 50px 0;
+}
+
+.title{
+  @extend .font-serrat-bold;
+  font-size:19px;
+  color:#162143;
+  text-transform: uppercase;
+  line-height:35px;
+}
+
+.title-1{
+  @extend .title;
+  font-size:30px;
+}
+
+p{
+  line-height:21px;
+  margin-bottom:20px;
+}
+
+.section-title{
+  @extend .font-serrat;
+  font-size:20px;
+  text-transform: uppercase;
+  text-align:center;
+  color:#e0e1e2;
+  margin-bottom:40px;
+}

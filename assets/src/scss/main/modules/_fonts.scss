@@ -1,0 +1,16 @@
+.font-serrat{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+.font-serrat-light{
+  @extend .font-serrat;
+  font-weight:300;
+}
+
+.font-gills{
+  font-family: 'Lato', sans-serif;
+}
+
+.font-pts{
+  font-family: 'PT Sans', sans-serif;
+}

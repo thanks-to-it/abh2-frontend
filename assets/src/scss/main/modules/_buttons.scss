@@ -1,0 +1,15 @@
+.abh2-button{
+  padding:10px 17px;
+  border-radius: 5px;
+  font-size:12px;
+}
+
+.button-1{
+  @extend .abh2-button;
+  background: #53e3fd;
+  background: -moz-linear-gradient(left, #53e3fd 0%, #21b2ff 100%);
+  background: -webkit-linear-gradient(left, #53e3fd 0%,#21b2ff 100%);
+  background: linear-gradient(to right, #53e3fd 0%,#21b2ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53e3fd', endColorstr='#21b2ff',GradientType=1 );
+  font-weight:bold;
+}

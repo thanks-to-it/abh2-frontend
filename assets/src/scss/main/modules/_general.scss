@@ -1,0 +1,18 @@
+.block-ch-lh{
+  @extend %block-ch-lh;
+}
+
+.block-ch-lh-o{
+  @extend %block-ch-lh-o;
+}
+
+body{
+  background-image: url("../images/bkg.png");
+  color:#000;
+}
+
+img{
+  max-width: 100%;
+  height:auto;
+}
+

@@ -1,0 +1,55 @@
+//Block - Limit Horizontally
+%block-lh {
+  width: $container-lg;
+  @media (max-width: $screen-lg) {
+    width: 100%;
+  }
+}
+
+//Block - Limit Horizontally Offset
+/*%block-lho{
+  margin-left:30px;
+  margin-right:30px;
+}*/
+
+//Block - Center Horizontally - Limit Horizontally
+%block-ch-lh {
+  @extend %block-lh;
+  margin: 0 auto;
+}
+
+//Block - Center Horizontally - Limit Horizontally - Offset
+%block-ch-lh-o {
+  @extend %block-ch-lh;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+//Block - Center Horizontally - Limit Horizontally
+/*%block-ch-lho {
+  @extend %block-lho;
+  margin: 0 auto;
+}*/
+
+.align-ji-parent {
+  text-align: justify;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.align-ji-child {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+

@@ -1,20 +1,22 @@
-.font-serrat{
-  font-family: 'Montserrat', sans-serif;
-  font-weight:400;
-}
-.font-serrat-light{
-  @extend .font-serrat;
-  font-weight:300;
-}
-.font-serrat-bold{
-  @extend .font-serrat;
-  font-weight:600;
+.font-serrat {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 }
 
-.font-gills{
-  font-family: 'Lato', sans-serif;
+.font-serrat-light {
+	@extend .font-serrat;
+	font-weight: 300;
 }
 
-.font-pts{
-  font-family: 'PT Sans', sans-serif;
+.font-serrat-bold {
+	@extend .font-serrat;
+	font-weight: 600;
+}
+
+.font-gills {
+	font-family: 'Lato', sans-serif;
+}
+
+.font-pts {
+	font-family: 'PT Sans', sans-serif;
 }

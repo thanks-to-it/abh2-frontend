@@ -1,27 +1,27 @@
 .social {
-  .social-item {
+    .social-item {
+        display: inline-block;
+        font-size: 15px;
+        background: #fefefe;
+        border-radius: 100px;
+        line-height: 25px;
+        text-align: center;
+        margin: 0 0 0 10px;
 
-    a{
-      width:25px;
-      height:25px;
-      display:block;
-      color:#3A4B7E;
+        a {
+            width: 25px;
+            height: 25px;
+            display: block;
+            color: #3A4B7E;
+        }
+
+        &:first-child {
+            margin: 0;
+        }
+
+        &:hover {
+            background: #B9E5EF;
+        }
+
     }
-
-    display: inline-block;
-    font-size:15px;
-    background:#fefefe;
-    border-radius: 100px;
-    line-height:25px;
-    text-align:center;
-
-    margin:0 0 0 10px;
-    &:first-child{
-      margin:0;
-    }
-
-    &:hover{
-      background:#B9E5EF;
-    }
-  }
 }

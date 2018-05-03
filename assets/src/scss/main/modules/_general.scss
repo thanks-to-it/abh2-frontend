@@ -1,51 +1,122 @@
 .block-ch-lh {
-  @extend %block-ch-lh;
+    @extend %block-ch-lh;
 }
 
 .block-ch-lh-o {
-  @extend %block-ch-lh-o;
+    @extend %block-ch-lh-o;
 }
 
 body {
-  @extend .font-pts;
-  background-image: url("../images/bkg.png");
-  color: #000;
+    @extend .font-pts;
+    background-image: url("../images/bkg.png");
+    color: #000;
+    overflow-x:hidden;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    color:#379bcd;
 }
 
 .section {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 
-.title{
-  @extend .font-serrat-bold;
-  font-size:19px;
-  color:#162143;
-  text-transform: uppercase;
-  line-height:35px;
+.title {
+    @extend .font-serrat-bold;
+    text-align:center;
+    font-size: 19px;
+    color: #162143;
+    text-transform: uppercase;
+    line-height: 35px;
+    @media (max-width: $screen-sm) {
+        font-size:14px;
+        line-height:30px;
+    }
 }
 
-.title-1{
-  @extend .title;
-  font-size:30px;
+.title-1 {
+    @extend .title;
+    font-size: 30px;
+    @media (max-width: $screen-sm) {
+        font-size:25px;
+        line-height:30px;
+    }
 }
 
-p{
-  line-height:21px;
-  margin-bottom:20px;
+.title-2 {
+    @extend .title;
+    margin-bottom:50px;
 }
 
-.section-title{
-  @extend .font-serrat;
-  font-size:20px;
-  text-transform: uppercase;
-  text-align:center;
-  color:#e0e1e2;
-  margin-bottom:40px;
+p {
+    line-height: 21px;
+    margin-bottom: 20px;
+    &:last-child{
+        margin-bottom:0;
+    }
+}
+
+.column-header {
+    position: relative;
+}
+
+.section-title {
+    @extend .font-serrat;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e0e1e2;
+    margin-bottom: 40px;
+}
+
+.bubble {
+    width: 213px;
+    height: 213px;
+    background: url("../images/bubble-1.png");
+    position: absolute;
+    top: -45px;
+    font-size: 60px;
+    @extend .font-serrat-bold;
+    color: #fff;
+    .content {
+        position: absolute;
+        top: 44px;
+        left: 56px;
+        text-align: center;
+        width: 118px;
+        height: 118px;
+        display: block;
+        line-height: 118px;
+    }
+    @media (max-width: $screen-sm) {
+        top: -62px;
+        transform: scale(0.68); /* Equal to scaleX(0.7) scaleY(0.7) */
+    }
+}
+
+.bubble-1 {
+    @extend .bubble;
+    left: -160px;
+}
+
+.bubble-2 {
+    background: url("../images/bubble-2.png");
+    left: 120px;
+    top: -100px;
+    @extend .bubble;
+    .content {
+        left: 38px;
+        font-size: 50px;
+    }
+    @media (max-width: $screen-sm) {
+        top: -66px;
+        left:75px;
+    }
 }
 
 

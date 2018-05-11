@@ -5,18 +5,41 @@
 	@extend .font-serrat;
 	font-size: 0;
 	z-index: 2;
+	transition: max-height ease-in-out 0.3s;
+
+	.toggle-icon {
+		display: none;
+		z-index: 2;
+	}
+
+	&:after {
+		background: red;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 0;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		opacity: 0;
+		background: #F9F9F9;
+		transition: all ease-in-out 0.3s;
+	}
 
 	// Logo
 	.logo {
 		span {
 			display: none;
 		}
+
 		.logo-img {
 			max-width: 164px;
 		}
+
 		.logo-img-2 {
 			display: none;
 		}
+
 		@extend .align-ji-child;
 	}
 
@@ -25,15 +48,26 @@
 		@extend .align-ji-child;
 
 		.menu-item {
+			&.active {
+				a {
+					color: #B3DDE9;
+				}
+			}
+			a:hover{
+				color: #B3DDE9;
+			}
+
 			display: inline-block;
 			border-left: 1px solid #74dac6;
 
 			a {
+				transition:all 0.3s ease-in-out;
 				padding: 0 20px;
 				color: #fefefe;
 				text-decoration: none;
 				text-transform: uppercase;
 				font-size: 13px;
+				//@extend .font-serrat-bold;
 			}
 
 			&:first-child {
@@ -51,9 +85,129 @@
 		}
 	}
 
+	&.style2, &.open {
+
+		.toggle-icon {
+			&:before {
+				color: #11B1FD;
+			}
+		}
+
+		&:after {
+			opacity: 0.97;
+			height: 100%;
+		}
+
+		.menu {
+			.menu-item {
+				a {
+					color: #000;
+				}
+				&.active, &:hover {
+					a {
+						color: #AFAFB2;
+					}
+				}
+				a:hover{
+					color: #AFAFB2;
+				}
+			}
+		}
+
+		.logo .logo-img-1 {
+			display: none;
+		}
+
+		.logo .logo-img-2 {
+			display: inline-block;
+		}
+
+		.social {
+			.social-item {
+				background: #9A9A9E;
+				a {
+					color: #fff;
+				}
+
+				&:hover {
+					background: #3199CE;
+				}
+			}
+		}
+
+	}
+
 	// Social
 	.social {
 		@extend .align-ji-child;
+	}
+
+	@media (max-width: $screen-md-max) {
+		.menu .menu-item a {
+			padding: 0 13px;
+		}
+	}
+
+	&.open {
+		max-height: 500px !important;
+	}
+
+	@media (max-width: $screen-md) {
+		max-height: 46px;
+		overflow: hidden;
+
+		.block-ch-lh-o {
+			.toggle-icon {
+				text-align: right;
+				font-size: 25px;
+				color: #fff;
+				font-weight: 600; /* Fix version 5.0.9 */
+				position: relative;
+				top: 13px;
+				cursor: pointer;
+				display: block;
+				//width:50px;
+				right: 0;
+				float: right;
+
+				&:before {
+					font-family: Font Awesome\ 5 Free !important;
+					content: "\f0c9" !important;
+				}
+			}
+		}
+
+		.block-ch-lh-o {
+			text-align: center;
+		}
+
+		.logo {
+			display: block;
+			margin-bottom: 30px;
+			text-align: left;
+			//margin-top:-40px;
+			margin-top: -14px;
+		}
+
+		.social {
+			display: block;
+			margin-bottom: 25px;
+		}
+
+		.menu {
+			display: block;
+		}
+
+		.menu .menu-item {
+			border: none;
+			display: block;
+			margin: 0 auto;
+			line-height: 32px;
+
+			&.associese {
+				margin: 25px 0 32px;
+			}
+		}
 	}
 }
 

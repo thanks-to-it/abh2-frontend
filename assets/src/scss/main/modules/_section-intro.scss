@@ -3,6 +3,32 @@
 	padding-top: 0;
 	position: relative;
 
+	@media (max-width: $screen-md) {
+		height:430px;
+	}
+
+	.block-ch-lh-o{
+		height:100%;
+	}
+
+	.intro-slider{
+		@extend .font-serrat-light;
+		@extend .center-h;
+		color:#fff;
+		font-size:39px;
+		top:47%;
+		margin:0 auto;
+		text-align:center;
+		max-width:539px;
+		strong{
+			@extend .font-serrat-bold;
+		}
+
+		.slider-item{
+			padding:20px 0;
+		}
+	}
+
 	&:after {
 		content: "";
 		display: block;

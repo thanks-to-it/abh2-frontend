@@ -1,0 +1,33 @@
+.section-associados {
+	font-size: 0;
+
+	.logo-wrapper {
+		display: inline-block;
+		width: 25%;
+		height: 182px;
+		background: #fefefe;
+		border-radius: 5px;
+		text-align: center;
+		box-sizing: border-box;
+		margin:0 0 28px 0;
+
+		@media (max-width: $screen-sm-max) {
+			width:50%;
+		}
+
+		@media (max-width: $screen-sm-min) {
+			width:100%;
+		}
+
+		img {
+			@extend .center-h;
+			height: auto;
+		}
+	}
+
+	.logo {
+		border: 1px solid #EAEBEC;
+		margin: 0 5%;
+		height: 182px;
+	}
+}

@@ -20,6 +20,7 @@ img {
 
 a{
     color:#379bcd;
+    transition:color 0.3s ease-in-out;
 }
 
 .section {
@@ -116,6 +117,14 @@ p {
     @media (max-width: $screen-sm) {
         top: -66px;
         left:75px;
+    }
+}
+
+.slider{
+    opacity:0;
+    transition:opacity 0.3s ease-in-out;
+    &.active{
+        opacity:1;
     }
 }
 

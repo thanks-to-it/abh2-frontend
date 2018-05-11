@@ -1,4 +1,5 @@
 function includeHTML() {
+
     var z, i, elmnt, file, xhttp;
     /*loop through a collection of all HTML elements:*/
     z = document.getElementsByTagName("*");
@@ -20,6 +21,15 @@ function includeHTML() {
             }
             xhttp.open("GET", file, true);
             xhttp.send();
+
+            if (window.CustomEvent) {
+                var event = new CustomEvent(file);
+            } else {
+                var event = document.createEvent('CustomEvent');
+                event.initCustomEvent(file, true, true);
+            }
+            document.dispatchEvent(event);
+            
             /*exit the function:*/
             return;
         }

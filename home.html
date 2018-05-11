@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>ABH2 - Associação Brasileira do Hidrogênio</title>
 
     <!-- CSS -->
     <link rel='stylesheet' id='abh2-css' href='assets/dist/css/abh2.min.css' type='text/css' media='all'/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:300,400,600|PT+Sans" rel="stylesheet">
-
 
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,17 +24,15 @@
 
 <div class="site">
     <div class="block header" w3-include-html="header.html"></div>
-    <div class="block section section-intro" w3-include-html="section-intro.html" data-parallax="scroll"
-         data-image-src="assets/dist/images/bkg-1.jpg"></div>
-    <div class="block section section-quem-somos" w3-include-html="section-quem-somos.html"></div>
-    <div class="block section section-governanca" w3-include-html="section-governanca.html"></div>
+    <div class="block section section-intro" w3-include-html="section-intro.html" data-parallax="scroll" data-image-src="assets/dist/images/bkg-1.jpg"></div>
+    <div id="quem-somos" class="block section section-quem-somos" w3-include-html="section-quem-somos.html"></div>
+    <div id="governanca" class="block section section-governanca" w3-include-html="section-governanca.html"></div>
+    <div id="associados" class="block section section-associados" w3-include-html="section-associados.html"></div>
 </div>
 
 <script>
     includeHTML();
 </script>
-
-
 
 </body>
 </html>

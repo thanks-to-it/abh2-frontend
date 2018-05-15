@@ -1,13 +1,30 @@
-.section-associados {
+.section-noticias {
 	font-size: 0;
 
+	.section-title{
+		color:#858686;
+	}
+
+	.date{
+		@extend .font-serrat-bold;
+		color:#3199CE;
+		text-align:left;
+		font-size:13px;
+	}
+
+	.title-1{
+		max-width:200px;
+		margin:0 auto;
+	}
+
+
+
 	.item-wrapper {
+		text-align:left;
+		font-size:14px;
 		display: inline-block;
 		width: 25%;
-		height: 182px;
-		background: #fefefe;
 		border-radius: 5px;
-		text-align: center;
 		box-sizing: border-box;
 		margin:0 0 28px 0;
 
@@ -26,8 +43,14 @@
 	}
 
 	.item {
+		padding:25px;
+		box-sizing: border-box;
 		border: 1px solid #EAEBEC;
+		border-radius:8px;
 		margin: 0 5%;
-		height: 182px;
+		min-height: 182px;
+		background:#fff;
+		color:#000;
 	}
+
 }

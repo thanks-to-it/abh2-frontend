@@ -100,6 +100,9 @@ var abh2_menu = {
             //window.onscroll = abh2_menu.swap_menu_style();
             window.addEventListener('scroll', abh2_menu.swap_menu_style);
             abh2_menu.swap_menu_style();
+        }else{
+            this.header = document.querySelectorAll('.block.header');
+            abh2_menu.header[0].classList.add('style2');
         }
     },
 
@@ -143,6 +146,21 @@ jQuery(window).scroll(function () {
 });
 $(window).scroll();
 jQuery(window).on('load', function () {
+    jQuery('select').select2();
+});
+jQuery(window).on('load', function () {
+
+    // Intro
+    jQuery('.intro-slider').on('init', function (event, slick, direction) {
+        jQuery(this).addClass('active');
+    }).slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5500,
+        adaptiveHeight: true,
+    });
+
+    // Governanca
     jQuery('.section-governanca .slider').on('init', function (event, slick, direction) {
         jQuery(this).addClass('active');
     }).slick({
@@ -170,12 +188,32 @@ jQuery(window).on('load', function () {
         ]
     });
 
-    jQuery('.intro-slider').on('init', function (event, slick, direction) {
+    // Noticias
+    jQuery('.section-noticias .slider').on('init', function (event, slick, direction) {
         jQuery(this).addClass('active');
     }).slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5500,
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
         adaptiveHeight: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
+
 });

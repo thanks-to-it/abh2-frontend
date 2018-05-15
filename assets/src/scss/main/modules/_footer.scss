@@ -1,0 +1,42 @@
+.footer {
+	background: #202660;
+	padding: 30px 0;
+	color: #fff;
+	font-size:13px;
+
+	.content {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.social {
+		margin-bottom:16px;
+	}
+
+	.developed-by{
+		margin:10px 0 0 0;
+		*{
+			vertical-align: middle;
+		}
+	}
+
+	.logo-kinda-footer{
+
+		margin:0 0 5px 8px;
+		max-width:30px;
+		display:inline-block;
+		img{
+			filter: grayscale(100%) contrast(5) invert(1);
+			//filter: contrast(1);
+			width:100%;
+			height:auto;
+		}
+	}
+}
+
+body.associe-se{
+	.footer{
+		background:#3199CE;
+	}
+}

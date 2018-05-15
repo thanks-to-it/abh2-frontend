@@ -63,6 +63,9 @@ var abh2_menu = {
             //window.onscroll = abh2_menu.swap_menu_style();
             window.addEventListener('scroll', abh2_menu.swap_menu_style);
             abh2_menu.swap_menu_style();
+        }else{
+            this.header = document.querySelectorAll('.block.header');
+            abh2_menu.header[0].classList.add('style2');
         }
     },
 

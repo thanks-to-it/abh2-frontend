@@ -87,6 +87,20 @@
 
 	&.style2, &.open {
 
+		.associese {
+			color:#fff;
+			a{
+				color:#fff !important;
+			}
+			&:hover{
+				a{
+					//color:#fff !important;
+					color:#000 !important;
+				}
+			}
+
+		}
+
 		.toggle-icon {
 			&:before {
 				color: #11B1FD;

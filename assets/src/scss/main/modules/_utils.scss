@@ -43,8 +43,23 @@
 	vertical-align: middle;
 }
 
-.center-h{
+.center-h {
 	position: relative;
 	top: 50%;
 	transform: perspective(1px) translateY(-50%);
+}
+
+.col-50 {
+	position:relative;
+	box-sizing: border-box;
+	width: 50%;
+	display: inline-block;
+	padding: 0 18px 0 0;
+	&:nth-child(even) {
+		padding: 0 0 0 18px;
+	}
+	@media (max-width: $screen-sm) {
+		width:100%;
+		padding:0 !important;
+	}
 }

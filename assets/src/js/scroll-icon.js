@@ -5,4 +5,4 @@ jQuery(window).scroll(function () {
         jQuery('.scroll-downs').removeClass('scrolled');
     }
 });
-$(window).scroll();
+jQuery(window).scroll();

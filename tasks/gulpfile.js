@@ -31,7 +31,7 @@ gulp.task('js-frontend-custom', function () {
         .pipe(gulp.dest(dirs.frontend.dist.js))
         .pipe(concat('abh2.min.js'))
         .pipe(uglify({
-            preserveComments:'license'
+
         }).on('error', function(e){
             console.log(e.message); return this.end();
         }))

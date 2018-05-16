@@ -100,7 +100,7 @@ table {
   vertical-align: middle;
 }
 
-.center-h, .section-intro .intro-slider, .section-associados .item-wrapper img, .section-noticias .item-wrapper img {
+.center-h, .modal .modal-content, .section-intro .intro-slider, .section-associados .item-wrapper img, .section-noticias .item-wrapper img {
   position: relative;
   top: 50%;
   -webkit-transform: perspective(1px) translateY(-50%);
@@ -645,6 +645,204 @@ p:last-child {
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
   color: #fff !important;
   background-color: #15B5FD !important;
+}
+
+.modal {
+  /*display:none;
+
+	&.is-open{
+		display:block;
+	}*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  text-align: center;
+}
+
+.modal *:focus {
+  outline: 0;
+}
+
+.modal:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.modal .modal-content {
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 650px;
+  max-height: 700px;
+  background: #fff;
+  margin: 0 auto 0 auto;
+  z-index: 2;
+  display: inline-block;
+  padding: 40px 20px 40px 35px;
+  position: relative;
+  font-size: 13px;
+}
+
+.modal .modal-content img {
+  margin: 0 0 23px 0;
+  width: 100%;
+}
+
+.modal .overflow-wrapper {
+  overflow: hidden;
+}
+
+.modal .overflow-child {
+  display: block;
+  overflow-y: scroll;
+  max-height: 630px;
+  padding-right: 17px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.modal .close {
+  border: none !important;
+  background: #1F2459;
+  font-size: 30px;
+  color: #fff;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  position: absolute;
+  right: -26px;
+  top: -26px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal .close * {
+  pointer-events: none;
+}
+
+.modal .close:hover {
+  background: #379bcd;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@-webkit-keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes mmslideIn {
+  from {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+  }
+}
+
+@-webkit-keyframes mmslideOut {
+  to {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes mmslideOut {
+  to {
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  -webkit-animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  -webkit-animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  -webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] {
+  -webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
 }
 
 .social .social-item {

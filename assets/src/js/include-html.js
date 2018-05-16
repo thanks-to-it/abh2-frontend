@@ -29,7 +29,7 @@ function includeHTML() {
                 event.initCustomEvent(file, true, true);
             }
             document.dispatchEvent(event);
-            
+
             /*exit the function:*/
             return;
         }

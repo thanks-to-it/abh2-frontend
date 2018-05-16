@@ -29,7 +29,7 @@ function includeHTML() {
                 event.initCustomEvent(file, true, true);
             }
             document.dispatchEvent(event);
-            
+
             /*exit the function:*/
             return;
         }
@@ -137,6 +137,22 @@ window.addEventListener("load", function () {
     abh2_menu.handle_mobile_opening();
     abh2_menu.handle_menu_items();
 });
+window.addEventListener("load", function () {
+    jQuery(document).on("click", "[data-open-modal!=''][data-open-modal]", function (e) {
+        var modal_id = jQuery(this).attr('data-open-modal');
+
+        if (jQuery("#" + modal_id).length) {
+            e.preventDefault();
+            MicroModal.show(modal_id, {
+                disableScroll: false,
+                awaitCloseAnimation: true
+            }); // [1]
+        }
+    });
+
+
+});
+
 jQuery(window).scroll(function () {
     if(jQuery(this).scrollTop()>0){
         jQuery('.scroll-downs').addClass('scrolled');
@@ -144,7 +160,7 @@ jQuery(window).scroll(function () {
         jQuery('.scroll-downs').removeClass('scrolled');
     }
 });
-$(window).scroll();
+jQuery(window).scroll();
 jQuery(window).on('load', function () {
     jQuery('select').select2();
 });

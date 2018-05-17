@@ -1,0 +1,80 @@
+.section-associese{
+	padding-top:200px;
+	.intro-text{
+		max-width:940px;
+		margin:0 auto;
+		text-align:center;
+		color:#355297;
+		font-size:15px;
+		margin-bottom:60px;
+	}
+
+	.title-2{
+		margin-bottom:20px;
+	}
+
+	.abh2-form{
+		max-width:100%
+	}
+
+	.max-width-forms{
+		max-width:644px;
+	}
+
+	.infos{
+		margin-bottom:45px;
+	}
+
+	.box-1{
+		margin-top:50px;
+
+	}
+
+	.box-2{
+		margin-bottom:30px;
+		padding-left:25px;
+		padding-right:25px;
+		input{
+			display:inline-block;
+			vertical-align: middle;
+		}
+		label{
+			display:inline-block;
+			vertical-align: middle;
+			margin:0;
+			font-size:15px;
+		}
+	}
+
+	.box-3{
+		min-width:300px;
+		margin-top:90px;
+		margin-bottom:28px;
+		display:inline-block;
+		box-sizing: border-box;
+		min-height:335px;
+		margin-left:20px;
+		margin-right:20px;
+
+		@media (max-width: $screen-sm) {
+			min-width: auto;
+		}
+
+		.title-5{
+			max-width:200px;
+		}
+	}
+
+	.slider-item{
+
+	}
+
+	.boxes{
+		margin-top:50px;
+	}
+
+}
+
+
+
+

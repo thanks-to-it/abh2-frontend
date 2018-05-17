@@ -1,51 +1,55 @@
 .section-governanca {
 	position: relative;
-	color:#9a9fab;
-	font-size:13px;
+	color: #9a9fab;
+	font-size: 13px;
 
-	.slider-item{
-		margin-top:45px;
-		border:1px solid #EAEBEC;
-		padding:32px 32px;
+	.slider-item {
+		background:#FEFEFE;
+		margin-top: 45px;
+		border: 1px solid #EAEBEC;
+		padding: 32px 32px;
 		box-sizing: border-box;
-		&:first-child{
-			margin-left:0;
+		transition:all ease-in-out 0.3s;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover{
+			background:#F7F7F7;
 		}
 	}
 
-	.slick-slide{
-		margin:0 15px;
-
+	.slick-slide {
+		margin: 0 15px;
 	}
 
-	.slider-photo{
-		border-radius:87px;
-		width:87px;
-		height:87px;
-		overflow:hidden;
-		position:relative;
+	.slider-photo {
+		border-radius: 87px;
+		width: 87px;
+		height: 87px;
+		overflow: hidden;
+		position: relative;
 		//margin:0 0 20px 0;
-		margin:-75px 0 20px 0;
+		margin: -75px 0 20px 0;
 	}
 
-	.slider-title{
+	.slider-title {
 		@extend .font-serrat-bold;
-		font-size:16px;
-		color:#162143;
-		margin-bottom:5px;
+		font-size: 16px;
+		color: #162143;
+		margin-bottom: 5px;
 	}
 
-	.slider-subtitle{
+	.slider-subtitle {
 		@extend .font-serrat;
-		font-size:13px;
+		font-size: 13px;
 	}
 
-	.slider-content{
-		margin-top:15px;
+	.slider-content {
+		margin-top: 15px;
 	}
 
-	.secondary-inf{
+	.secondary-inf {
 		@extend .font-serrat-bold;
-		color:#379bcd;
+		color: #379bcd;
 	}
 }

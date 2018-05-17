@@ -20,15 +20,44 @@ var abh2_menu = {
                 }
             });
 
+        function preventAnchorScroll() {
+            var scrollToTop = function () {
+                $(window).scrollTop(0);
+            };
+            if (window.location.hash) {
+                // handler is executed at most once
+                $(window).one('scroll', scrollToTop);
+            }
+
+            // make sure to release scroll 1 second after document readiness
+            // to avoid negative UX
+            $(function () {
+                setTimeout(
+                    function () {
+                        $(window).off('scroll', scrollToTop);
+                    },
+                    1000
+                );
+            });
+        }
+
         // so we can get a fancy scroll animation
         menuItems.click(function (e) {
-            console.log(e);
+
+            var target = this.hash;
+            //target = target.replace('#', '');
+            //
+
+            //console.log(e.preventDefault);
             var href = jQuery(this).attr("href"),
                 id = href.substring(href.indexOf('#'));
-            offsetTop = href === "#" ? 0 : jQuery(id).offset().top - topMenuHeight + 1;
+            offsetTop = href === "#" ? 0 : jQuery(id).offset().top - topMenuHeight;
             jQuery('html, body').stop().animate({
                 scrollTop: offsetTop
-            }, 300);
+            }, 300,function(){
+                window.location.hash = target;
+                window.scrollTo(0, offsetTop); // values are x,y-offset
+            });
             e.preventDefault();
         });
 

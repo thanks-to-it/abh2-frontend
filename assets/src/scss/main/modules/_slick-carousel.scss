@@ -31,3 +31,20 @@
 		}
 	}
 }
+
+.slick-dots li button{
+	&:before{
+		text-shadow: 1px 0 0 #cccc, -1px 0 0 #cccc, 0 1px 0 #cccc, 0 -1px 0 #cccc, 1px 1px #cccc, -1px -1px 0 #cccc, 1px -1px 0 #cccc, -1px 1px 0 #cccc;
+		opacity:1 !important;
+		color:#fff !important;
+		font-size:15px !important;
+	}
+	&:hover:before{
+		color:#116ACA !important;
+		opacity:0.5 !important;
+	}
+}
+
+.slick-dots li.slick-active button:before{
+	color:#116ACA !important;
+}

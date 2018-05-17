@@ -57,15 +57,44 @@ var abh2_menu = {
                 }
             });
 
+        function preventAnchorScroll() {
+            var scrollToTop = function () {
+                $(window).scrollTop(0);
+            };
+            if (window.location.hash) {
+                // handler is executed at most once
+                $(window).one('scroll', scrollToTop);
+            }
+
+            // make sure to release scroll 1 second after document readiness
+            // to avoid negative UX
+            $(function () {
+                setTimeout(
+                    function () {
+                        $(window).off('scroll', scrollToTop);
+                    },
+                    1000
+                );
+            });
+        }
+
         // so we can get a fancy scroll animation
         menuItems.click(function (e) {
-            console.log(e);
+
+            var target = this.hash;
+            //target = target.replace('#', '');
+            //
+
+            //console.log(e.preventDefault);
             var href = jQuery(this).attr("href"),
                 id = href.substring(href.indexOf('#'));
-            offsetTop = href === "#" ? 0 : jQuery(id).offset().top - topMenuHeight + 1;
+            offsetTop = href === "#" ? 0 : jQuery(id).offset().top - topMenuHeight;
             jQuery('html, body').stop().animate({
                 scrollTop: offsetTop
-            }, 300);
+            }, 300,function(){
+                window.location.hash = target;
+                window.scrollTo(0, offsetTop); // values are x,y-offset
+            });
             e.preventDefault();
         });
 
@@ -212,6 +241,7 @@ jQuery(window).on('load', function () {
         infinite: true,
         speed: 300,
         slidesToShow: 4,
+        slidesToScroll: 4,
         adaptiveHeight: true,
         arrows: false,
         responsive: [
@@ -232,4 +262,39 @@ jQuery(window).on('load', function () {
         ]
     });
 
+    // Associese
+    jQuery('.slider-associese').on('init', function (event, slick, direction) {
+        jQuery(this).addClass('active');
+    }).slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+
+});
+window.addEventListener("load", function () {
+    /*jQuery("input[type='checkbox']").uniform({
+
+    });*/
 });

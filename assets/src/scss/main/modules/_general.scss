@@ -89,6 +89,14 @@ a{
     }
 }
 
+.title-5{
+    @extend .font-serrat-bold;
+    font-size: 25px;
+    text-transform:initial ;
+    line-height:28px;
+    display: inline-block;
+}
+
 p {
     line-height: 21px;
     margin-bottom: 17px;
@@ -135,16 +143,115 @@ p {
     }
 }
 
+label{
+    cursor:pointer;
+}
+
+.box-1 {
+    @extend .font-serrat-light;
+    @extend .font-serrat-bold;
+    text-transform: uppercase;
+    margin-top: 90px;
+    border: 1px solid #EAEBEC;
+    background: #F9F9F9;
+    font-size: 16px;
+    padding: 28px 30px 15px;
+    color:#000;
+    text-align:center;
+
+    @media (max-width: $screen-md) {
+        margin-top:30px;
+    }
+
+    .box-title {
+        width: 120px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom:15px;
+        @media (max-width: $screen-md) {
+            display:block;
+            text-align:center;
+            width:100%;
+            margin-bottom:30px;
+        }
+    }
+
+    .box-items {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .box-item {
+        text-align:left;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        margin:0 20px 15px 80px;
+        @media (max-width: $screen-md) {
+            margin-left:0;
+            margin-right:0;
+            display:block;
+        }
+
+        a{
+            color:#000;
+        }
+
+        a:hover{
+            color:#3199CE;
+            .icon{
+                background-position:0 -40px;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/sprites.png") no-repeat;
+            width: 32px;
+            height: 40px;
+            margin-right:20px;
+            @media (max-width: $screen-md-max) {
+                margin-right:10px;
+            }
+        }
+
+        .content {
+            max-width: 170px;
+            line-height:13px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.box-2{
+    @extend .font-serrat-bold;
+    box-sizing: border-box;
+    background:#FEFEFE;
+    padding:36px 90px;
+    border:1px solid #E5E5E6;
+    border-radius:5px;
+    font-size:14px;
+    text-transform:uppercase;
+    text-align:center;
+
+    p{
+        line-height:18px;
+    }
+}
+
 .bubble-1 {
     @extend .bubble;
     left: -160px;
 }
 
 .bubble-2 {
+    @extend .bubble;
     background: url("../images/bubble-2.png");
     left: 120px;
     top: -100px;
-    @extend .bubble;
+
     .content {
         left: 38px;
         font-size: 50px;
@@ -152,6 +259,106 @@ p {
     @media (max-width: $screen-sm) {
         top: -66px;
         left:75px;
+    }
+}
+
+.bubble-3 {
+    background: url("../images/bubble-3.png");
+    width: 213px;
+    height: 213px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left:8px;
+    margin-bottom:-25px;
+    .content {
+        font-size: 45px;
+        color: #fff;
+        width: 118px;
+        height: 118px;
+        display: block;
+        left: 37px;
+        top: 45px;
+        position: absolute;
+        i {
+            line-height: 112px;
+        }
+    }
+}
+
+.box-3{
+    border:1px solid #EAEBEC;
+    background:#fff;
+    text-align:center;
+    padding:0 20px 50px 20px;
+    border-radius:5px;
+    margin:73px 0 0 0;
+
+    .bubble-3{
+        margin-top:-105px;
+    }
+
+    .title-5{
+        margin-bottom:20px;
+    }
+
+    .price{
+        @extend .font-serrat-bold;
+        font-size:33px;
+        color:#3199CE;
+    }
+
+    .info{
+        margin:20px 0 35px 0;
+        color:#919191;
+        font-size:14px;
+    }
+}
+
+.box-4{
+    border:1px solid #DFE1E2;
+    border-radius:5px;
+    font-size:0;
+    padding:20px 0;
+    @extend .font-serrat;
+    .column{
+        text-align:center;
+        font-size:15px;
+        display:inline-block;
+        vertical-align: top;
+        width:50%;
+        box-sizing: border-box;
+        padding:20px 80px;
+        border-left:1px solid #DFE1E2;
+        &:first-child{
+            border:none;
+        }
+    }
+    .info-1{
+        font-size:14px;
+        @extend .font-serrat-bold;
+        text-transform:uppercase;
+        margin:0 0 20px 0;
+    }
+    .info-2{
+        text-decoration:underline;
+        @extend .font-serrat-bold;
+        margin:0 0 10px 0;
+    }
+    .info-3{
+        line-height:20px;
+    }
+
+    @media (max-width: $screen-sm) {
+        padding:0px 0;
+        .column{
+            padding:40px 15px;
+            margin:0 auto;
+            border:none;
+            border-top:1px solid #DFE1E2;
+            width:90%;
+            display:block;
+        }
     }
 }
 

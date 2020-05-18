@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 
     <script src="assets/dist/js/abh2.js"></script>
 </head>
@@ -30,13 +30,432 @@
 <body>
 
 <div class="site">
-    <div class="block header" w3-include-html="header.html"></div>
+    <!-- Header -->
+    <div class="block header">
+        <div class="block-ch-lh-o align-ji-parent">
+            <div class="toggle-icon"></div>
+            <h1 class="logo">
+                <a href="home.html">
+                    <span>ABH2 - Associação Brasileira do Hidrogênio</span>
+                    <img class="logo-img logo-img-1" src="assets/dist/images/logotipo-abh2-branco.png" />
+                    <img class="logo-img logo-img-2" src="assets/dist/images/logotipo-abh2-preto.png " />
+                </a>
+            </h1>
+            <ul class="menu">
+                <li class="menu-item"><h2><a href="home.html#quem-somos">Quem Somos</a></h2></li>
+                <li class="menu-item"><h2><a href="home.html#governanca">Governança</a></h2></li>
+                <li class="menu-item"><h2><a href="home.html#associados">Associados</a></h2></li>
+                <li class="menu-item"><h2><a href="home.html#noticias">Notícias</a></h2></li>
+                <li class="menu-item"><h2><a href="home.html#contato">Contato</a></h2></li>
+                <li class="menu-item associese"><h2><a href="associe-se.html">Associe-se</a></h2></li>
+            </ul>
+            <ul class="social" w3-include-html="social.html"></ul>
+        </div>
+    </div>
+
+    <!-- Intro -->
     <div class="block section section-intro" w3-include-html="section-intro.html" data-parallax="scroll" data-image-src="assets/dist/images/bkg-1.jpg"></div>
-    <div id="quem-somos" class="block section section-quem-somos" w3-include-html="section-quem-somos.html"></div>
-    <div id="governanca" class="block section section-governanca" w3-include-html="section-governanca.html"></div>
-    <div id="associados" class="block section section-associados" w3-include-html="section-associados.html"></div>
-    <div id="noticias" class="block section section-noticias" w3-include-html="section-noticias.html" data-parallax="scroll" data-image-src="assets/dist/images/bkg-2.jpg"></div>
-    <div id="contato" class="block section section-contato" w3-include-html="section-contato.html"></div>
+
+    <!-- Quem Somos -->
+    <div id="quem-somos" class="block section section-quem-somos">
+        <div class="block-ch-lh-o">
+            <h2 class="section-title">Quem Somos</h2>
+            <div class="column-1">
+                <div class="column-header">
+                    <span class="bubble-1"><span class="content">H</span></span></span>
+                    <h3 class="title-1 column-title">Nossa<br/>História</h3>
+                    <h4 class="title-2 column-subtitle">Sobre a ABH2</h4>
+                </div>
+                <p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis nec diam non dapibus. Aenean
+                    eleifend nisi in leo sodales tincidunt. Maecenas est lectus, molestie sed interdum non, dapibus ut leo.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ut sem
+                    ultricies, sagittis purus vestibulum, pulvinar augue. Donec convallis venenatis metus, eget feugiat neque
+                    ornare eu.
+                </p>
+                <p>Nulla ultricies dignissim variusortor convallis. Aliquam erat volutpat. Duis cursus augue sit amet risus
+                    viverra laoreet. Nulla placerat pretium felis, et blandit arcu suscipit at. Integer et sem lectus. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus
+                </p>
+            </div>
+            <div class="column-2">
+                <div class="column-header">
+                    <span class="bubble-2"><span class="content"><i class="fas fa-star"></i></span></span>
+                    <h3 class="title-1 column-title">Nossa<br/>missão</h3>
+                    <h4 class="title-2 column-subtitle">Compromisso</h4>
+                </div>
+                <p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis nec diam non dapibus. Aenean
+                    eleifend nisi in leo sodales tincidunt. Maecenas est lectus, molestie sed interdum non, dapibus ut leo.
+                    Vestibulum ante ipsum primis in faucibus orci
+                </p>
+            </div>
+            <div class="box-1">
+                <span class="box-title">Documentos e registros</span>
+                <ul class="box-items">
+                    <li class="box-item"><a href="#"><span class="icon"></span><span class="content">Ata de Constituição</span></a></li>
+                    <li class="box-item"><a href="#"><span class="icon"></span><span class="content">Estatuto Social</span></a></li>
+                    <li class="box-item"><a href="#"><span class="icon"></span><span class="content">Edital de Convocação Assembléia Geral Extraordinária - AGE</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Governanca -->
+    <div id="governanca" class="block section section-governanca">
+        <div class="block-ch-lh-o">
+            <h2 class="section-title">Governança</h2>
+            <h3 class="title-1">Sócios Fundadores</h3>
+            <h3 class="title-2">Conselho</h3>
+            <div class="slider">
+                <div class="slider-item-parent">
+                    <div class="slider-item">
+                        <div class="slider-photo"><img src="assets/imgs/img-87x87.jpg"/></div>
+                        <div class="slider-title">Paulo Emilio Miranda</div>
+                        <div class="slider-subtitle">Cargo, <span class="secondary-inf">UFRJ - LABH2</span></div>
+                        <div class="slider-content"><p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                            iaculis nec diam non dapibus. Aenean eleifend nisi in leo sodales tincidunt. Maecenas est lectus,
+                            molestie sed interdum non, dapibus ut leo. Vestibulum ante ipsum primis in</p></div>
+                    </div>
+                </div>
+                <div class="slider-item-parent">
+                    <div class="slider-item">
+                        <div class="slider-photo"><img src="assets/imgs/img-87x87.jpg"/></div>
+                        <div class="slider-title">Paulo Emilio Miranda</div>
+                        <div class="slider-subtitle">Cargo, <span class="secondary-inf">UFRJ - LABH2</span></div>
+                        <div class="slider-content"><p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                            iaculis nec diam non dapibus. Aenean eleifend nisi in leo sodales tincidunt. Maecenas est lectus,
+                            molestie sed interdum non, dapibus ut leo. Vestibulum ante ipsum primis in</p></div>
+                    </div>
+                </div>
+                <div class="slider-item-parent">
+                    <div class="slider-item">
+                        <div class="slider-photo"><img src="assets/imgs/img-87x87.jpg"/></div>
+                        <div class="slider-title">Paulo Emilio Miranda</div>
+                        <div class="slider-subtitle">Cargo, <span class="secondary-inf">UFRJ - LABH2</span></div>
+                        <div class="slider-content"><p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                            iaculis nec diam non dapibus. Aenean eleifend nisi in leo sodales tincidunt. Maecenas est lectus,
+                            molestie sed interdum non, dapibus ut leo. Vestibulum ante ipsum primis in</p></div>
+                    </div>
+                </div>
+                <div class="slider-item-parent">
+                    <div class="slider-item">
+                        <div class="slider-photo"><img src="assets/imgs/img-87x87.jpg"/></div>
+                        <div class="slider-title">Paulo Emilio Miranda</div>
+                        <div class="slider-subtitle">Cargo, <span class="secondary-inf">UFRJ - LABH2</span></div>
+                        <div class="slider-content"><p>A ABH2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                            iaculis nec diam non dapibus. Aenean eleifend nisi in leo sodales tincidunt. Maecenas est lectus,
+                            molestie sed interdum non, dapibus ut leo. Vestibulum ante ipsum primis in</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Associados -->
+    <div id="associados" class="block section section-associados">
+        <div class="block-ch-lh-o">
+            <h2 class="section-title">Associados</h2>
+            <h3 class="title-1">Empresas</h3>
+            <h3 class="title-2">Parceiros</h3>
+            <div class="items">
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <img src="assets/imgs/img-141x80.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Noticias -->
+    <div id="noticias" class="block section section-noticias" data-parallax="scroll" data-image-src="assets/dist/images/bkg-2.jpg">
+        <div class="block-ch-lh-o">
+            <h2 class="section-title">Notícias</h2>
+            <h3 class="title-1">Novidades e Eventos</h3>
+            <h3 class="title-2">ABH2</h3>
+            <div class="slider slider-items items">
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" data-open-modal="modal-1" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" data-open-modal="modal-2" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" data-open-modal="modal-3" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Novidade aqui Lorem ipsum dolor sit amet</h3>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightboxes -->
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+            <div tabindex="-1" data-micromodal-close class="modal__overlay modal-content modal__container" role="dialog" aria-modal="true">
+                <button class="close modal__btn" data-micromodal-close aria-label="Close modal"><i class="fas fa-times"></i></button>
+                <div class="overflow-wrapper">
+                    <div class="overflow-child">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Post 1</h3>
+                        <img src="assets/imgs/img-540x352.jpg"/>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+            <div tabindex="-1" data-micromodal-close class="modal__overlay modal-content modal__container" role="dialog" aria-modal="true">
+                <button class="close modal__btn" data-micromodal-close aria-label="Close modal"><i class="fas fa-times"></i></button>
+                <div class="overflow-wrapper">
+                    <div class="overflow-child">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Post 2</h3>
+                        <img src="assets/imgs/img-540x352.jpg"/>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+            <div tabindex="-1" data-micromodal-close class="modal__overlay modal-content modal__container" role="dialog" aria-modal="true">
+                <button class="close modal__btn" data-micromodal-close aria-label="Close modal"><i class="fas fa-times"></i></button>
+                <div class="overflow-wrapper">
+                    <div class="overflow-child">
+                        <div class="date">03/04/18</div>
+                        <h3 class="title-3">Post 3</h3>
+                        <img src="assets/imgs/img-540x352.jpg"/>
+                        <p>Sed semper tortor velit, ac vehicula odio ornare non. Nam quis quam id lorem mattis posuere vel
+                            venenatis justo.</p>
+                        <p> Praesent nunc elit, efficitur vitae consequat sit amet, vulputate at ligula. Vivamus gravida, neque
+                            eget varius facilisis, mi lorem molestie neque, at egestas felis nibh quis dui. Donec vel erat ac
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contato -->
+    <div id="contato" class="block section section-contato">
+        <div class="block-ch-lh-o">
+            <h2 class="section-title">Contato</h2>
+            <h3 class="title-1">Fale Conosco</h3>
+            <h3 class="title-2">Mande sua Mensagem</h3>
+            <form class="items abh2-form">
+                <div class="item col-50">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome"/>
+                </div>
+                <div class="item col-50">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"/>
+                </div>
+                <div class="item col-50">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone"/>
+                </div>
+                <div class="item col-50">
+                    <label for="assunto">Assunto</label>
+                    <select name="assunto" id="assunto">
+                        <option>Selecione o assunto</option>
+                        <option>Assunto 1</option>
+                        <option>Assunto 2</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+                </div>
+                <div class="item">
+                    <span class="info">* Todos os Campos são obrigatórios</span>
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div class="footer">
         <div class="content">
             <ul class="social" w3-include-html="social.html"></ul>
@@ -48,7 +467,7 @@
 </div>
 
 <script>
-    includeHTML();
+    w3.includeHTML();
 </script>
 
 </body>
